@@ -1,13 +1,17 @@
 <script>
-    export let tasks = []
+    export let tasks 
+    $: console.log(tasks)
 </script>
 
-<ul>
+<ul >
     {#if tasks.length < 1}
         <li>No pending tasks</li>
     {:else}
         {#each tasks as task (task.id)}
-            <li>{task}</li>
+            <li class="card-action">
+                <strong>{task.title}</strong>
+                <p>{task.description}</p>
+            </li>
         {/each}
     {/if}
 
