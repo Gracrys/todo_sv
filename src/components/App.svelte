@@ -14,8 +14,8 @@
 
 
 	onMount(() => {
-        tasks = JSON.parse(localStorage.getItem("todo"))
-        ids =  JSON.parse(localStorage.getItem("lastId"))
+        tasks = JSON.parse(localStorage.getItem("todo")) ? JSON.parse(localStorage.getItem("todo")) : [] 
+        ids =  JSON.parse(localStorage.getItem("lastId")) ? JSON.parse(localStorage.getItem("lastId")) : 0
  
     });
 
