@@ -1,0 +1,26 @@
+{
+  "name": "todo_sv",
+  "version": "1.0.0",
+  "description": "todo app with svelte.js",
+  "main": "app.js",
+  "repository": "https://github.com/Gracrys/todo_sv.git",
+  "author": "hazy <gracrys@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-svelte": "^4.0.5",
+    "pug": "^2.0.4",
+    "svelte": "^3.16.7"
+  },
+  "dependencies": {
+    "pug2svelte": "^0.0.2-alpha.9"
+  },
+  "browserslist": [
+    "last 1 chrome versions"
+  ],
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  }
+}
