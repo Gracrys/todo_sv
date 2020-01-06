@@ -4,7 +4,8 @@
   import NewTask from './NewTask.svelte';
   let ids = 0;
   let tasks = []
-  let newTask = (x) => {x.detail.id = ++ids; tasks = [...tasks,x.detail]; console.log(tasks)}
+  let newTask = (x) => {x.detail.id = ++ids; tasks = [...tasks,x.detail]; }
+  let erase = (x) => tasks = tasks.filter(y => y.id != x.detail)
 
 </script>
 
@@ -28,5 +29,5 @@
 <main>
   <h4>Welcome again</h4>
   <NewTask on:newTask={newTask}/>
-  <Tasks bind:tasks={tasks} />
+  <Tasks bind:tasks={tasks} on:delete={erase} />
 </main>

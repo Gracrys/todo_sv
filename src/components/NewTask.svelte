@@ -8,7 +8,7 @@ let dispatch = createEventDispatcher();
             dispatch('newTask', task);
         else
             alert("No content")
-        task = { }
+        task = {title: "", description: "" }
 	}
 </script>
 
