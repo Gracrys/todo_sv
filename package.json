@@ -7,14 +7,16 @@
   "author": "hazy <gracrys@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "node-sass": "^4.13.0",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.5",
     "pug": "^2.0.4",
+    "sass": "^1.24.2",
     "svelte": "^3.16.7"
   },
   "dependencies": {
-    "pug2svelte": "^0.0.2-alpha.9"
+    "node-css": "^0.1.0",
+    "pug2svelte": "^0.0.2-alpha.9",
+    "svelte-ui-theme": "^0.0.13"
   },
   "browserslist": [
     "last 1 chrome versions"

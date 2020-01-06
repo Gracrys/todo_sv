@@ -1,5 +1,6 @@
 import App from './components/App.svelte';
 
+
 const app = new App({
   target: document.body,
   props: {
@@ -7,4 +8,9 @@ const app = new App({
   },
 });
 
-export default app;
+if (module.hot) {
+  module.hot.accept()
+}
+
+
+export default app

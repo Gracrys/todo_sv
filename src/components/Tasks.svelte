@@ -3,10 +3,10 @@
 </script>
 
 <ul>
-    {#if tasks.lenght < 1}
+    {#if tasks.length < 1}
         <li>No pending tasks</li>
     {:else}
-        {#each tasks as task, task.id}
+        {#each tasks as task (task.id)}
             <li>{task}</li>
         {/each}
     {/if}
