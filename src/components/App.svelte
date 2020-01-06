@@ -2,10 +2,23 @@
   export let name;
   import Tasks from './Tasks.svelte';
   import NewTask from './NewTask.svelte';
-  let ids = 0;
+    import { onMount } from 'svelte';
+
+  let ids = 0 
   let tasks = []
-  let newTask = (x) => {x.detail.id = ++ids; tasks = [...tasks,x.detail]; }
-  let erase = (x) => tasks = tasks.filter(y => y.id != x.detail)
+  let newTask = (x) => {x.detail.id = ++ids; tasks = [...tasks,x.detail]; storeTasks(); storeId()}
+  let erase = (x) => {tasks = tasks.filter(y => y.id != x.detail);  storeTasks()}
+
+      const storeId = () =>   localStorage.setItem('lastId', JSON.stringify(ids));      
+      const storeTasks = () =>  localStorage.setItem('todo', JSON.stringify(tasks));
+
+
+	onMount(() => {
+        tasks = JSON.parse(localStorage.getItem("todo"))
+        ids =  JSON.parse(localStorage.getItem("lastId"))
+ 
+    });
+
 
 </script>
 
